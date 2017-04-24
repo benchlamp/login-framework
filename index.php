@@ -126,7 +126,7 @@
             </div>
             
             <div class="form-group">
-             <a href="register.php">Sign Up Here...</a>
+             <a href="register.php">Sign Up Here..</a>
             </div>
         
         </div>
