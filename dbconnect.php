@@ -23,9 +23,9 @@ $db_found = mysqli_select_db($conn, $username);
 
 
 
-if ($conn) { echo "connection successful!";}
+//if ($conn) { echo "connection successful!";}
 
-if ($db_found) { echo "database connection successful!"; }
+//if ($db_found) { echo "database connection successful!"; }
 
 
 
