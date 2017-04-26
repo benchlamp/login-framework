@@ -13,18 +13,20 @@ $db_found = mysqli_select_db($conn, $username);
 
 
 
-$SQL = "SELECT * FROM survey_index";
+$SQL = "SELECT * FROM subsurv_favourite_pizza";
 $result = mysqli_query($conn, $SQL);
+
+$json_data= array(); // create a new array
 
 
 while ( $db_field = mysqli_fetch_assoc($result) ) {
 
-foreach($db_field as $key => $val) {
-    echo $key . " = " . $val . "<br/>";
-}
+  array_push($json_data, $db_field);
 
 }
 
-
+$json_data = json_encode($json_data);
+ 
+echo $json_data;
 
 ?>

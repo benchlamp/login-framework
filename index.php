@@ -69,27 +69,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Login Page</title>
-  <style>
-    
-    .container > .jumbotron {
-      margin-top: 5%;
-      background-color: #5cb85c;
-      color: #effefe;
-    }
-    
-    .btn-success {
-      margin-right: 5px;
-    }
-    
-  </style>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style.css">
   </head>
 <body>
   <script src="https://code.jquery.com/jquery.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <div class="container">
   <div class="jumbotron">
-    <h1>Bench Mark</h1>
+    <h1>Benchmark</h1>
       <hr />
     <h4>Investigate. Participate.</h4>
   </div>
