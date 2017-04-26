@@ -1,4 +1,3 @@
-
 <meta name="robots" content="noindex">
 <?php
  ob_start();
@@ -90,7 +89,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <div class="container">
   <div class="jumbotron">
-    <h1>Voting App</h1>
+    <h1>Bench Mark</h1>
       <hr />
     <h4>Investigate. Participate.</h4>
   </div>
@@ -98,7 +97,7 @@
     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off"> <!-- PHP add form functionality here -->
       <div class="col-md-12">
         <div class="form-group">
-          <h3>Sign in</h3>
+          <h3>Sign in</h3><a href="home.php">or continue as guest</a>
         </div> <!-- /form-group -->
         <div class="form-group">
           <hr />

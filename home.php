@@ -2,18 +2,16 @@
  ob_start();
  session_start();
  require_once 'dbconnect.php';
- // if session is not set this will redirect to login page
- if( !isset($_SESSION['user']) ) {
-  header("Location: index.php");
-  exit;
- }
- // select loggedin users detail
- $res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']);
- $userRow=mysql_fetch_array($res);
 
-foreach($_SESSION as $key => $val) {
-  echo $key . " = " . $val . "<br />";
-}
+ // select loggedin users detail
+ $res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['user']);
+ $userRow=mysqli_fetch_array($res);
+
+if (!$userRow) {
+  $_SESSION["userName"] = "Guest";
+} 
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,13 +29,25 @@ foreach($_SESSION as $key => $val) {
 
  <div class="container">
     
-     <div class="page-header">
+     <div class="jumbotron">
      <h3>logged in as <?php echo $_SESSION["userName"]; ?></h3>
      </div>
         <div class="row">
         <div class="col-lg-12">
         <p>this is the home area</p>
-        <a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></li>
+
+<?php if ($_SESSION["userName"] == "Guest") {
+
+echo "<p>Please sign in to create new surveys</p>";
+echo '<a href="index.php"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign In</a>';
+
+} else {
+echo '<a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a>';
+
+}
+?>
+
+
         </div>
         </div>
     
